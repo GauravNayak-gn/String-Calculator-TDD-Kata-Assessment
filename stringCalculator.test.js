@@ -19,3 +19,8 @@ test('multiple numbers returns their sum', () => {
   const calc = new StringCalculator();
   expect(calc.add("1,2,3,4")).toBe(10);
 });
+
+test('handles newlines as separators', () => {
+  const calc = new StringCalculator();
+  expect(calc.add("1\n2,3")).toBe(6);
+});
