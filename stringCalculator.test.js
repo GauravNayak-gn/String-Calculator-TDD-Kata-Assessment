@@ -4,3 +4,8 @@ test('empty string returns 0', () => {
   const calc = new StringCalculator();
   expect(calc.add("")).toBe(0);
 });
+
+test('single number returns the number', () => {
+  const calc = new StringCalculator();
+  expect(calc.add("5")).toBe(5);
+});
