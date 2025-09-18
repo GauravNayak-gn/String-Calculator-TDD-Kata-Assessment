@@ -24,3 +24,8 @@ test('handles newlines as separators', () => {
   const calc = new StringCalculator();
   expect(calc.add("1\n2,3")).toBe(6);
 });
+
+test('ignores numbers greater than 1000', () => {
+  const calc = new StringCalculator();
+  expect(calc.add("2,1001")).toBe(2);
+});
